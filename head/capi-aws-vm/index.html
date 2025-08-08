@@ -12,13 +12,13 @@
         <meta name="author" content="Mirantis, Inc.">
       
       
-        <link rel="canonical" href="https://docs.k0smotron.io/head/capi-remotemachine-teleport/">
+        <link rel="canonical" href="https://docs.k0smotron.io/head/capi-aws-vm/">
       
       
-        <link rel="prev" href="../capi-vsphere/">
+        <link rel="prev" href="../capi-aws/">
       
       
-        <link rel="next" href="../capi-remotemachine-okta-asa/">
+        <link rel="next" href="../capi-hetzner/">
       
       
       <link rel="icon" href="../img/k0s_social.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Remote Machine with Teleport - Documentation</title>
+        <title>AWS (VMs) - Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-remote-machine-with-teleport" class="md-skip">
+        <a href="#cluster-api-aws-on-ec2-instances" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@ You are not currently viewing the documentation for the current stable release o
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Remote Machine with Teleport
+              AWS (VMs)
             
           </span>
         </div>
@@ -859,10 +859,32 @@ You are not currently viewing the documentation for the current stable release o
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../capi-aws-vm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    AWS (VMs)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -873,6 +895,59 @@ You are not currently viewing the documentation for the current stable release o
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-aws-infra-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare the AWS infra provider
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-child-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a child cluster
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -997,32 +1072,10 @@ You are not currently viewing the documentation for the current stable release o
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Remote Machine with Teleport
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../capi-remotemachine-teleport/" class="md-nav__link">
         
   
   
@@ -1033,71 +1086,6 @@ You are not currently viewing the documentation for the current stable release o
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-service-account" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating Service Account
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-teleport-bot-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating Teleport Bot User
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a deployment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-remotemachine" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create a RemoteMachine
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1750,39 +1738,27 @@ You are not currently viewing the documentation for the current stable release o
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-service-account" class="md-nav__link">
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-aws-infra-provider" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating Service Account
+      Prepare the AWS infra provider
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-teleport-bot-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating Teleport Bot User
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-deployment" class="md-nav__link">
+  <a href="#creating-a-child-cluster" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a deployment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-remotemachine" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create a RemoteMachine
+      Creating a child cluster
     </span>
   </a>
   
@@ -1804,190 +1780,158 @@ You are not currently viewing the documentation for the current stable release o
 
 
 
-<h1 id="using-remote-machine-with-teleport">Using Remote Machine with Teleport<a class="headerlink" href="#using-remote-machine-with-teleport" title="Permanent link">#</a></h1>
-<p>This guide will walk you through the process of preparing your management cluster to use the Remote Machine provider with <a href="https://goteleport.com/">Teleport</a>.</p>
+<h1 id="cluster-api-aws-on-ec2-instances">Cluster API - AWS on ec2 instances<a class="headerlink" href="#cluster-api-aws-on-ec2-instances" title="Permanent link">#</a></h1>
+<p>This example demonstrates how k0smotron can be used with CAPA (Cluster API Provider Amazon Web Services) to deploy
+a cluster with hosted control plane and workers in AWS.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
-<p>To use the Remote Machine provider with Teleport, you need to have a Teleport cluster up and running. You can follow the <a href="https://goteleport.com/docs/quickstart/">official guide</a> to get started.
-Also, you need to have <code>tctl</code> installed on your desktop.</p>
-<h2 id="creating-service-account">Creating Service Account<a class="headerlink" href="#creating-service-account" title="Permanent link">#</a></h2>
-<p>First, you need to create a service account for Teleport user. It requires an admin access to the secrets since it creates and regularly updates a secret with the Teleport credentials.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
+<p>Before starting this example, ensure that you have met the <a href="../capi-examples/#prerequisites">general prerequisites</a>. In addition to those, you should also have appropriate AWS credentials available and the AWS CLI configured on your local machine.</p>
+<h3 id="prepare-the-aws-infra-provider">Prepare the AWS infra provider<a class="headerlink" href="#prepare-the-aws-infra-provider" title="Permanent link">#</a></h3>
+<p>Before launching a cluster, it's crucial to set up your infrastructure provider. Each provider has its unique prerequisites and configuration steps.</p>
+<p>Follow the AWS Provider <a href="https://cluster-api-aws.sigs.k8s.io/getting-started.html#initialize-the-management-cluster">installation guide</a> for detailed steps.</p>
+<h2 id="creating-a-child-cluster">Creating a child cluster<a class="headerlink" href="#creating-a-child-cluster" title="Permanent link">#</a></h2>
+<p>Once all the controllers are up and running, you can apply the cluster manifests containing the specifications of the cluster you want to provision.</p>
+<div class="admonition warning">
+<p class="admonition-title">AWS limits userdata to 16kb</p>
+<p>AWS has a limit of 16kb for userdata. As k0smotron generates certificates and other files it might reach the limit, so you may need to compress it.
+This can be done by setting <code>AWSMachineTemplate.spec.template.spec.uncompressedUserData</code> to <code>false</code> in the AWSMachineTemplate manifest.</p>
+</div>
+<p>Here is an example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cluster.x-k8s.io/v1beta1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cluster</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron-teleport-bot</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nn">---</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secrets-admin</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">rules</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apiGroups</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;secrets&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;*&quot;</span><span class="p p-Indicator">]</span>
-<span class="nn">---</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RoleBinding</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron-teleport-bot-secrets-admin</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">subjects</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">teleport-bot</span>
-<span class="nt">roleRef</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">secrets-admin</span>
-<span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
-</code></pre></div>
-<h2 id="creating-teleport-bot-user">Creating Teleport Bot User<a class="headerlink" href="#creating-teleport-bot-user" title="Permanent link">#</a></h2>
-<p>Next, you need to create a Teleport Bot user for the service account. Since we use a <code>kubernetes</code> auth method for Teleport, first we need to figure out the cluster's JWKS.
-It will be used by the Teleport Cluster to verify the JWT tokens.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>kubectl<span class="w"> </span>proxy<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>
-$<span class="w"> </span>curl<span class="w"> </span>http://localhost:8080/openid/v1/jwks
-<span class="o">{</span><span class="s2">&quot;keys&quot;</span>:<span class="o">[</span>&lt;REDACTED&gt;<span class="o">]}</span>
-</code></pre></div>
-<p>Create <code>teleport-role.yaml</code>. Don't forget to specify correct permissions for the role, see <a href="https://goteleport.com/docs/access-controls/guides/role-templates/">Teleport documentation</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">role</span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v5</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron-bot</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">allow</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
-<span class="w">  </span><span class="nt">deny</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
-<span class="w">  </span><span class="nt">options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>tctl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>teleport-role.yaml
-</code></pre></div>
-<p>Now, we can create a Teleport Bot user. Create <code>k0smotron-bot-token.yaml</code></p>
-<div class="highlight"><pre><span></span><code><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">token</span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v2</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="c1"># name will be specified in the `tbot` to use this token</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron-bot</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">roles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">Bot</span><span class="p p-Indicator">]</span>
-<span class="w">  </span><span class="c1"># bot_name will match the name of the bot created later in this guide.</span>
-<span class="w">  </span><span class="nt">bot_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron</span>
-<span class="w">  </span><span class="nt">join_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes</span>
-<span class="w">  </span><span class="nt">kubernetes</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">static_jwks</span>
-<span class="w">    </span><span class="nt">static_jwks</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">jwks</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">        </span><span class="no">{&quot;keys&quot;:[&lt;REDACTED&gt;]}</span>
-<span class="w">    </span><span class="nt">allow</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service_account</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;default:k0smotron-teleport-bot&quot;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>tctl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>k0smotron-bot-token.yaml
-</code></pre></div>
-<p>Finally, create a bot user:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>tctl<span class="w"> </span>bots<span class="w"> </span>add<span class="w"> </span>k0smotron<span class="w"> </span>--token<span class="w"> </span>k0smotron-bot<span class="w"> </span>--roles<span class="w"> </span>k0smotron-bot
-</code></pre></div>
-<h2 id="creating-a-deployment">Creating a deployment<a class="headerlink" href="#creating-a-deployment" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron-tbot-config</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">data</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">tbot.yaml</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">    </span><span class="no">version: v2</span>
-<span class="w">    </span><span class="no">onboarding:</span>
-<span class="w">      </span><span class="no">join_method: kubernetes</span>
-<span class="w">      </span><span class="no">token: k0smotron-bot # name of the join token</span>
-<span class="w">    </span><span class="no">storage:</span>
-<span class="w">      </span><span class="no">type: memory</span>
-<span class="w">    </span><span class="no"># ensure this is configured to the address of your Teleport Proxy or</span>
-<span class="w">    </span><span class="no"># Auth Server. Prefer the address of the Teleport Proxy.</span>
-<span class="w">    </span><span class="no">auth_server: teleport.example.com:443</span>
-<span class="w">    </span><span class="no"># in outputs we specify the destination of the identity. In our case we will put it into the kubernetes secret.</span>
-<span class="w">    </span><span class="no">outputs:</span>
-<span class="w">    </span><span class="no">- type: identity</span>
-<span class="w">      </span><span class="no">destination:</span>
-<span class="w">        </span><span class="no">type: kubernetes_secret</span>
-<span class="w">        </span><span class="no">name: k0smotron-bot-identity</span>
-<span class="nn">---</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron-tbot</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-test-cluster</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 <span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">clusterNetwork</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">pods</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">cidrBlocks</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.0.0/16</span>
+<span class="w">    </span><span class="nt">serviceDomain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cluster.local</span>
+<span class="w">    </span><span class="nt">services</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">cidrBlocks</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.128.0.0/12</span>
+<span class="w">  </span><span class="nt">controlPlaneRef</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">controlplane.cluster.x-k8s.io/v1beta1</span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">K0sControlPlane</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-test</span>
+<span class="w">  </span><span class="nt">infrastructureRef</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">infrastructure.cluster.x-k8s.io/v1beta2</span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWSCluster</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s-aws-test</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">infrastructure.cluster.x-k8s.io/v1beta2</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWSMachineTemplate</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s-aws-test-mt</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">uncompressedUserData</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">ami</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Replace with your AMI ID</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ami-046da914e42bb0388</span><span class="w"> </span><span class="c1"># Ubuntu 22.04 in eu-west-1</span>
+<span class="w">      </span><span class="nt">instanceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">t3.large</span>
+<span class="w">      </span><span class="nt">iamInstanceProfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nodes.cluster-api-provider-aws.sigs.k8s.io</span><span class="w"> </span><span class="c1"># Instance Profile created by `clusterawsadm bootstrap iam create-cloudformation-stack`</span>
+<span class="w">      </span><span class="nt">cloudInit</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Makes CAPA use k0s bootstrap cloud-init directly and not via SSM</span>
+<span class="w">        </span><span class="c1"># Simplifies the VPC setup as we do not need custom SSM endpoints etc.</span>
+<span class="w">        </span><span class="nt">insecureSkipSecretsManager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">sshKeyName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;your-ssh-key-name&gt;</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">controlplane.cluster.x-k8s.io/v1beta1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">K0sControlPlane</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-test</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.33.2+k0s.0</span>
+<span class="w">  </span><span class="nt">updateStrategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recreate</span>
+<span class="w">  </span><span class="nt">k0sConfigSpec</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">args</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--enable-worker</span>
+<span class="w">    </span><span class="nt">k0s</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s.k0sproject.io/v1beta1</span>
+<span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterConfig</span>
+<span class="w">      </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s</span>
+<span class="w">      </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">api</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">extraArgs</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">anonymous-auth</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">        </span><span class="nt">telemetry</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">machineTemplate</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">infrastructureRef</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">infrastructure.cluster.x-k8s.io/v1beta2</span>
+<span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWSMachineTemplate</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s-aws-test-mt</span>
+<span class="w">      </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">infrastructure.cluster.x-k8s.io/v1beta2</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWSCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s-aws-test</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">region</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eu-west-1</span>
+<span class="w">  </span><span class="nt">sshKeyName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;your-ssh-key-name&gt;</span>
+<span class="w">  </span><span class="nt">controlPlaneLoadBalancer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">healthCheckProtocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<span class="w">  </span><span class="nt">network</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">additionalControlPlaneIngressRules</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;k0s</span><span class="nv"> </span><span class="s">controller</span><span class="nv"> </span><span class="s">join</span><span class="nv"> </span><span class="s">API&quot;</span>
+<span class="w">        </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tcp</span>
+<span class="w">        </span><span class="nt">fromPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9443</span>
+<span class="w">        </span><span class="nt">toPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9443</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cluster.x-k8s.io/v1beta1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MachineDeployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s-aws-test-md</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">clusterName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-test-cluster</span>
 <span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">app.kubernetes.io/name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron-tbot</span>
+<span class="w">      </span><span class="nt">cluster.x-k8s.io/cluster-name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-test-cluster</span>
+<span class="w">      </span><span class="nt">pool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">worker-pool-1</span>
 <span class="w">  </span><span class="nt">template</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">app.kubernetes.io/name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron-tbot</span>
+<span class="w">        </span><span class="nt">cluster.x-k8s.io/cluster-name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-test-cluster</span>
+<span class="w">        </span><span class="nt">pool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">worker-pool-1</span>
 <span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tbot</span>
-<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public.ecr.aws/gravitational/teleport:14.3.3</span>
-<span class="w">          </span><span class="nt">command</span><span class="p">:</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tbot</span>
-<span class="w">          </span><span class="nt">args</span><span class="p">:</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/config/tbot.yaml</span>
-<span class="w">          </span><span class="nt">env</span><span class="p">:</span>
-<span class="w">            </span><span class="c1"># POD_NAMESPACE is required for the kubernetes_secret` destination type to work correctly.</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POD_NAMESPACE</span>
-<span class="w">              </span><span class="nt">valueFrom</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">fieldRef</span><span class="p">:</span>
-<span class="w">                  </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.namespace</span>
-<span class="w">            </span><span class="c1"># KUBERNETES_TOKEN_PATH specifies the path to the service account JWT to use for joining.</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">KUBERNETES_TOKEN_PATH</span>
-<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/secrets/tokens/join-token</span>
-<span class="w">          </span><span class="nt">volumeMounts</span><span class="p">:</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/config</span>
-<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">config</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/secrets/tokens</span>
-<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">join-sa-token</span>
-<span class="w">      </span><span class="nt">serviceAccountName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tbot</span>
-<span class="w">      </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">config</span>
-<span class="w">          </span><span class="nt">configMap</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0smotron-tbot-config</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">join-sa-token</span>
-<span class="w">          </span><span class="nt">projected</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">sources</span><span class="p">:</span>
-<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">serviceAccountToken</span><span class="p">:</span>
-<span class="w">                  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">join-token</span>
-<span class="w">                  </span><span class="nt">expirationSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
-<span class="w">                  </span><span class="c1"># `teleport.example.com` must be replaced with the _name_ of your Teleport cluster.</span>
-<span class="w">                  </span><span class="nt">audience</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">teleport.example.com</span>
-</code></pre></div>
-<p>More information about Teleport's Machine ID and how to set it up with Kubernetes can be found <a href="https://goteleport.com/docs/machine-id/deployment/kubernetes/">here</a>.
-Also, you can use <a href="https://github.com/k0sproject/k0smotron/blob/None/config/samples/capi/remotemachine/capi-remotemachine-teleport.yaml">this example</a> as a reference.</p>
-<h2 id="create-a-remotemachine">Create a RemoteMachine<a class="headerlink" href="#create-a-remotemachine" title="Permanent link">#</a></h2>
-<p>Now we can create a RemoteMachine that will run the pod to setup the machine.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">infrastructure.cluster.x-k8s.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RemoteMachine</span>
+<span class="w">      </span><span class="nt">clusterName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-test-cluster</span>
+<span class="w">      </span><span class="nt">failureDomain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eu-west-1</span>
+<span class="w">      </span><span class="nt">bootstrap</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">configRef</span><span class="p">:</span><span class="w"> </span><span class="c1"># This triggers our controller to create cloud-init secret</span>
+<span class="w">          </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bootstrap.cluster.x-k8s.io/v1beta1</span>
+<span class="w">          </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">K0sWorkerConfigTemplate</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s-aws-test-machine-config</span>
+<span class="w">      </span><span class="nt">infrastructureRef</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">infrastructure.cluster.x-k8s.io/v1beta2</span>
+<span class="w">        </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWSMachineTemplate</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s-aws-test-mt</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bootstrap.cluster.x-k8s.io/v1beta1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">K0sWorkerConfigTemplate</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote-test-0</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k0s-aws-test-machine-config</span>
 <span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;server-name&gt;</span>
-<span class="w">  </span><span class="nt">useSudo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">  </span><span class="nt">provisionJob</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">sshCommand</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;tsh</span><span class="nv"> </span><span class="s">-i</span><span class="nv"> </span><span class="s">/identity-output/identity</span><span class="nv"> </span><span class="s">--proxy</span><span class="nv"> </span><span class="s">teleport.example.com:443</span><span class="nv"> </span><span class="s">ssh&quot;</span>
-<span class="w">    </span><span class="nt">scpCommand</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;tsh</span><span class="nv"> </span><span class="s">-i</span><span class="nv"> </span><span class="s">/identity-output/identity</span><span class="nv"> </span><span class="s">--proxy</span><span class="nv"> </span><span class="s">teleport.example.com:443</span><span class="nv"> </span><span class="s">scp&quot;</span>
-<span class="w">    </span><span class="nt">jobSpecTemplate</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">spec</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">containers</span><span class="p">:</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">teleport</span>
-<span class="w">            </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public.ecr.aws/gravitational/teleport:14.3.3</span>
-<span class="w">            </span><span class="nt">volumeMounts</span><span class="p">:</span>
-<span class="w">             </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">identity-output</span>
-<span class="w">               </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/identity-output</span>
-<span class="w">        </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">identity-output</span>
-<span class="w">            </span><span class="nt">secret</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">identity-output</span>
-<span class="w">        </span><span class="nt">restartPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Never</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.33.2+k0s.0</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>%<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>cluster,machine
+NAME<span class="w">                                        </span>CLUSTERCLASS<span class="w">   </span>PHASE<span class="w">         </span>AGE<span class="w">   </span>VERSION
+cluster.cluster.x-k8s.io/aws-test-cluster<span class="w">                  </span>Provisioned<span class="w">   </span>24h
+
+NAME<span class="w">                                     </span>CLUSTER<span class="w">            </span>NODENAME<span class="w">        </span>PROVIDERID<span class="w">                              </span>PHASE<span class="w">      </span>AGE<span class="w">    </span>VERSION
+machine.cluster.x-k8s.io/aws-test-0<span class="w">      </span>aws-test-cluster<span class="w">   </span>aws-test-0<span class="w">      </span>aws:///eu-west-1c/i-04ea1b27f52210bec<span class="w">   </span>Running<span class="w">    </span>24h<span class="w">    </span>v1.33.2+k0s.0
+machine.cluster.x-k8s.io/aws-test-1<span class="w">      </span>aws-test-cluster<span class="w">   </span>aws-test-1<span class="w">      </span>aws:///eu-west-1a/i-0c34ca4e0450acd64<span class="w">   </span>Running<span class="w">    </span>23h<span class="w">    </span>v1.33.2+k0s.0
+machine.cluster.x-k8s.io/aws-test-2<span class="w">      </span>aws-test-cluster<span class="w">   </span>aws-test-2<span class="w">      </span>aws:///eu-west-1b/i-0ac2d7fb7ad92dff6<span class="w">   </span>Running<span class="w">    </span>23h<span class="w">    </span>v1.33.2+k0s.0
 </code></pre></div>
 
 
