@@ -59,13 +59,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Login to Quay registry
-        uses: docker/login-action@v3
-        with:
-          registry: quay.io
-          username: ${{ secrets.QUAY_USER }}
-          password: ${{ secrets.QUAY_PASSWORD }}
-
       - name: Build image and push to Docker Hub and GitHub image registry
         uses: docker/build-push-action@v6
         with:
@@ -75,7 +68,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: |
             ghcr.io/k0sproject/k0smotron:${{ needs.release.outputs.image_tag }}
-            quay.io/k0sproject/k0smotron:${{ needs.release.outputs.image_tag }}
           push: true
 
       - name: Create install files
